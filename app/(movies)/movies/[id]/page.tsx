@@ -5,11 +5,10 @@ import MoviewInfo from '../../../../components/movie-info';
 export default async function MovieDetail({ params: { id } }: { params: { id: string } }) {
   return (
     <div>
-      <h3>Movie Detail Page</h3>
       <Suspense fallback={<h1>Loading movie info</h1>}>
         <MoviewInfo id={id} />
       </Suspense>
-      <Suspense fallback={<h1>Loading movie Videos</h1>}>
+      <Suspense fallback={<h6>Loading movie Videos</h6>}>
         <MovieVideos id={id} />
       </Suspense>
     </div>
