@@ -1,7 +1,8 @@
-// import { API_URL } from '../app/(home)/page';
+import { API_URL } from '../app/constants';
+
 async function getVideos(id: string) {
   await new Promise((resolve) => setTimeout(resolve, 3000));
-  const response = await fetch(`https://nomad-movies.nomadcoders.workers.dev/movies/${id}/videos`);
+  const response = await fetch(`${API_URL}/${id}/videos`);
   return response.json();
 }
 
